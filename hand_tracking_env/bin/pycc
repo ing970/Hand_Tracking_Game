@@ -1,0 +1,3 @@
+#!/Users/seokminlee/Desktop/mose/Hand_Tracking_Game/hand_tracking_env/bin/python3
+from numba.pycc import main
+main()
