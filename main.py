@@ -50,8 +50,8 @@ screen = pygame.display.set_mode((w, h))
 clock = pygame.time.Clock()
 
 # hand detection을 위해 cam을 딴다.
-# cam = cv2.VideoCapture(1) # mac User.
-cam = cv2.VideoCapture(0) # Window User.
+cam = cv2.VideoCapture(1) # mac User.
+# cam = cv2.VideoCapture(0) # Window User.
 
 # hand detection instance를 생성한다.
 mpHands = mp.solutions.hands
