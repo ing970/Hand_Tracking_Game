@@ -1,11 +1,5 @@
 # ✨ Zam-Zam Circulation
-![image](https://user-images.githubusercontent.com/71575861/227392075-0757992e-3254-4921-bd21-39de8cbadb3a.png)
-
 <img width="790" alt="zamzam1" src="https://github.com/ing970/Hand_Tracking_Game/assets/120775224/2d700ee3-db73-4644-9535-644c0d3056f8">
-
-<img width="790" alt="zamzam2" src="https://github.com/ing970/Hand_Tracking_Game/assets/120775224/c542c452-b1b6-4d5e-95ff-0e856b985454">
-
-
 
 ### 📎 목차
 #### [1. 개요](#1️⃣-개요)
