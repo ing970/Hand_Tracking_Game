@@ -1,6 +1,12 @@
 # ✨ Zam-Zam Circulation
 ![image](https://user-images.githubusercontent.com/71575861/227392075-0757992e-3254-4921-bd21-39de8cbadb3a.png)
 
+<img width="790" alt="zamzam1" src="https://github.com/ing970/Hand_Tracking_Game/assets/120775224/2d700ee3-db73-4644-9535-644c0d3056f8">
+
+<img width="790" alt="zamzam2" src="https://github.com/ing970/Hand_Tracking_Game/assets/120775224/c542c452-b1b6-4d5e-95ff-0e856b985454">
+
+
+
 ### 📎 목차
 #### [1. 개요](#1️⃣-개요)
 #### [2. 기술 스택](#2️⃣-기술-스택)
@@ -31,8 +37,11 @@
 - 게임의 디자인과 인터페이스는 사용자가 편안하고 즐겁게 게임을 즐길 수 있도록 구성되었습니다.
 #### 📍 librosa를 통한 노트 생성
 - 음악 분석을 통해 게임 내에서 사용자의 움직임과 시너지를 이루는 노트를 자동으로 생성합니다.
-![slide_2](https://user-images.githubusercontent.com/71575861/227393083-25f31077-ca6c-4f0b-b730-72d192b9d1f1.png)
-![ZZC_최종ver](https://user-images.githubusercontent.com/71575861/227392578-2b4d2fd1-40da-44d0-b066-f799674e816b.gif)
+<img width="990" alt="스크린샷 2023-11-18 오후 7 16 08" src="https://github.com/ing970/Hand_Tracking_Game/assets/120775224/7c6e92dd-67ae-4328-a146-1c6c2e8a8b24">
+
+
+![프로젝트](https://github.com/ing970/Hand_Tracking_Game/assets/120775224/3cbbc9cc-cfd7-4ae0-a679-b79e205f16f0)
+
 
 ## 5️⃣ 프로젝트 결과
 - 재활 치료 방법으로서의 새로운 가능성 탐색
