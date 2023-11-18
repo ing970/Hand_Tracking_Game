@@ -1,6 +1,6 @@
 # Zam-Zam Circulation
 ![image](https://user-images.githubusercontent.com/71575861/227392075-0757992e-3254-4921-bd21-39de8cbadb3a.png)
-- matplotlib의 hand tracking 기술과 pygame을 통한 리듬게임
+- mediapipe의 hand tracking 기술과 pygame을 통한 리듬게임
 - 사용 언어: <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>
 
 # 목차
