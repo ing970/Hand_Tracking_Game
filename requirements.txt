@@ -3,3 +3,4 @@ pygame
 librosa
 opencv-contrib-python
 mediapipe
+pytorch
