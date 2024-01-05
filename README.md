@@ -11,6 +11,7 @@
 - [mediapipe](https://google.github.io/mediapipe/) : 실시간 손동작 추적과 처리
 - [pygame](https://www.pygame.org/) : 인터랙티브 게임 개발 프레임워크
 - [librosa](https://librosa.org/) : 리듬 게임 내 노트 생성을 위한 음악 분석 및 처리
+- [pytorch] : 
 
   
 ## 3️⃣ 시연 영상
