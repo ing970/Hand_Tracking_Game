@@ -102,7 +102,7 @@ def rating(n):
         rate = 'EXCELLENT'
 
 # game을 실행하는 메인 함수를 정의한다.
-def game():
+def main_game():
     global gst, Time, combo, miss_anim, last_combo, combo_effect, combo_effect2, combo_time, rate, speed, t1, t2, t3, t4, miss_cnt, life_cnt
     
     # 시간 측정을 위해 게임이 플레이 되는 시간을 구하고 combo_time을 다시 계산한다.
@@ -127,6 +127,9 @@ def game():
         # 좌우 반전 
         image = cv2.flip(img, 1)
         results = hands.process(image)
+        
+        # user 화면 동시 송출
+        cv2.imshow('User', cv2.resize(image, (1000, 562)))
 
         if len(t1) > 0:
             rate_data[0] = t1[0][0]
@@ -425,6 +428,9 @@ def start_game():
         # 좌우 반전 
         image = cv2.flip(img, 1)
         results = hands.process(image)
+        
+        # user 화면 동시 송출
+        cv2.imshow('User', cv2.resize(image, (1000, 562)))
 
         # intro 화면을 띄운다.
         screen.fill(BLACK) 
@@ -467,7 +473,7 @@ def start_game():
 
                     # 게임 시작 조건
                     if start_box.collidepoint(int(palm_x), int(palm_y)):
-                        game()
+                        main_game()
                          
         pygame.display.flip()
         clock.tick(maxframe)
@@ -539,6 +545,9 @@ def end_game():
         image = cv2.flip(img, 1)
         results = hands.process(image)
         
+        # user 화면 동시 송출
+        cv2.imshow('User', cv2.resize(image, (1000, 562)))
+        
         # outro 화면을 띄운다.
         screen.fill(BLACK)
         screen.blit(end_txt_render, (w*(1/2) - end_txt_render.get_width() * (1/2), o4))
@@ -587,27 +596,18 @@ def end_game():
                     if quit_button_box.collidepoint(int(palm_x), int(palm_y)):
                         outro = False
                         pygame.quit()
+                        cv2.destroyAllWindows()
+                        cv2.waitKey(1)
                         sys.exit()
 
                     # 초기화를 시키고 게임을 다시 시작한다.
                     if restart_button_box.collidepoint(int(palm_x), int(palm_y)):
                         outro = False
-                        rate = 'START'
-                        excellent_cnt = 0     
-                        perfect_cnt = 0       
-                        bad_cnt = 0           
-                        miss_cnt = 0 
-                        combo = 0
-                        combo_effect = 0
-                        combo_effect2 = 0
-                        miss_anim = 0
-                        last_combo = 0
-                        life_cnt = 5
-                        generate_notes()
-                        simultaneous_notes()      
-                        game()
-
+                        restart_game()
+                        
         pygame.display.flip()
+    
+    cam.release()
 
 # 게임이 종료되었을 때 뜨는 창을 만드는 함수를 정의한다.
 def game_over():
@@ -645,6 +645,9 @@ def game_over():
         # 좌우 반전 
         image = cv2.flip(img, 1)
         results = hands.process(image)
+        
+        # user 화면 동시 송출
+        cv2.imshow('User', cv2.resize(image, (1000, 562)))
 
         # game over 화면을 띄운다.
         screen.fill(BLACK)
@@ -688,24 +691,47 @@ def game_over():
                     if quit_button_box.collidepoint(int(palm_x), int(palm_y)):
                         over = False
                         pygame.quit()
+                        cv2.destroyAllWindows()
+                        cv2.waitKey(1)
                         sys.exit()
 
                     # 초기화를 시키고 게임을 다시 시작한다.
                     if restart_button_box.collidepoint(int(palm_x), int(palm_y)):
                         over = False
-                        rate = 'START'
-                        excellent_cnt = 0     
-                        perfect_cnt = 0       
-                        bad_cnt = 0           
-                        miss_cnt = 0 
-                        combo = 0
-                        combo_effect = 0
-                        combo_effect2 = 0
-                        miss_anim = 0
-                        last_combo = 0
-                        life_cnt = 5
-                        generate_notes()
-                        simultaneous_notes()  
-                        game()
-
+                        restart_game()
+                        
         pygame.display.flip()
+        
+    cam.release()
+    
+# 모든 변수를 초기화 한다.
+def restart_game():
+    global rate, excellent_cnt, perfect_cnt, bad_cnt, miss_cnt, combo, combo_effect, combo_effect2, miss_anim, last_combo, life_cnt, t1, t2, t3, t4, rate_data
+    print("Resetting and restarting game...") 
+    
+    # 게임 상태 초기화
+    rate = 'START'
+    excellent_cnt = 0
+    perfect_cnt = 0
+    bad_cnt = 0
+    miss_cnt = 0
+    combo = 0
+    combo_effect = 0
+    combo_effect2 = 0
+    miss_anim = 0
+    last_combo = 0
+    life_cnt = 5
+
+    # 노트 리스트 초기화
+    t1.clear()
+    t2.clear()
+    t3.clear()
+    t4.clear()
+    rate_data = [0, 0, 0, 0]  # 필요한 경우 rate_data도 초기화
+    
+    # 새 노트 생성
+    generate_notes(beat_times, t1, t2, t3, t4)
+    simultaneous_notes(beat_times, t1, t2, t3, t4)
+    
+    # 게임 재시작
+    main_game()
