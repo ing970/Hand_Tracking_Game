@@ -25,6 +25,8 @@
 ## 3️⃣ 시연 영상
 ![zzc-demo](https://user-images.githubusercontent.com/71575861/227396803-47c1a603-ac0b-413d-9d8e-a151b54a29dc.gif)
 
+- 시연영상 Link : https://youtube.com/shorts/OyeFU7Bzdb0?si=PE9Av-uBAmbG1CDd
+
 ## 4️⃣ 프로젝트 세부사항
 #### 📍 재활 운동과 게임의 통합
 - 손을 쥐고 펴는 동작을 게임의 핵심 메커니즘으로 활용합니다. 이를 통해 사용자가 지루함 없이 재활 운동을 할 수 있게 합니다.
