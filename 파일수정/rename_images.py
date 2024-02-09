@@ -18,7 +18,7 @@ def copy_and_rename_images(directory, start_num=0, ext='*.jpg'):
     # 파일 이름 변경 후 저장
     for i, file_path in enumerate(file_paths, start=start_num):
         # 3자리 단위로 파일명 변경 (e.g., "image_005.jpeg")
-        new_file_name = f"Images_{i:03}.jpg"
+        new_file_name = f"Images_{i:04}.jpg"
         new_file_path = os.path.join(target_directory, new_file_name)
 
         # 파일 복사
@@ -26,5 +26,5 @@ def copy_and_rename_images(directory, start_num=0, ext='*.jpg'):
         print(f"Copied and renamed '{file_path}' to '{new_file_path}'")
 
 # 코드 실행
-source_directory = './data/val/'  # 디렉토리 변경
-copy_and_rename_images(source_directory, start_num=0)  # 인덱스 시작값(start_num) 변경
+source_directory = '../video0/'  # 디렉토리 변경
+copy_and_rename_images(source_directory, start_num=1000)  # 인덱스 시작값(start_num) 변경
