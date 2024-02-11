@@ -24,7 +24,6 @@
   
 ## 3️⃣ 시연 영상
 ![zzc-demo](https://user-images.githubusercontent.com/71575861/227396803-47c1a603-ac0b-413d-9d8e-a151b54a29dc.gif)
-
 - 시연영상 Link : https://youtube.com/shorts/OyeFU7Bzdb0?si=PE9Av-uBAmbG1CDd
 
 ## 4️⃣ 프로젝트 세부사항
