@@ -1,4 +1,4 @@
-# ✨ Zam-Zam Circulation
+# ✨ 리듬 노트 맞추기를 통한 손목 재활 프로그램
 <img width="790" alt="zamzam1" src="https://github.com/ing970/Hand_Tracking_Game/assets/120775224/2d700ee3-db73-4644-9535-644c0d3056f8">
 
 
